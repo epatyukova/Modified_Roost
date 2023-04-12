@@ -173,7 +173,7 @@ def data_from_composition(df,elem_features):
             for k in nodes:
                 edge_index.append([j,k])
         edge_index=torch.tensor(edge_index,dtype=torch.long)
-        data_list.append(Data(x=x,edge_index=edge_index.t().contiguous(),pos=weights))  
+        data_list.append(Data(x=x,edge_index=edge_index.t().contiguous(),pos=weights,y=y))   
     return data_list
 
 
